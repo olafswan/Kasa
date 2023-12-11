@@ -7,13 +7,9 @@ export default function Home() {
   return (
     <>
     
-       
         <TopSection/>
 
         <RoomsGallery/>
-
-        
-
 
     </>
 
