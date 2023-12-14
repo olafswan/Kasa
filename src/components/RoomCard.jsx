@@ -1,13 +1,12 @@
 import { NavLink } from "react-router-dom";
 
-
 export default function RoomCard({room}) {
   return (
     
-        <NavLink to="/room/{room}">
+        <NavLink to={`/rooms/${room.id}`} className='card'>
 
             <img src={room.cover}></img>
-            <h1>{room.title}</h1>
+            <h2>{room.title}</h2>
             
         </NavLink>
       
