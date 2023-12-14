@@ -1,0 +1,169 @@
+@mixin reset {
+    vertical-align: baseline;
+    font-weight: inherit;
+    font-family: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    border: 0 none;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+
+@mixin main-border ($direction: s){
+    @if ( $direction == t ) {
+        margin-top: 2rem;
+        margin-bottom: 0;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    @if ( $direction == b ) {
+        margin-top: 0;
+        margin-bottom: 2rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    @if ( $direction == s ) {
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+}
+
+@mixin sec-border ($direction: s){
+    @if ( $direction == t ) {
+        margin-top: 1rem;
+        margin-bottom: 0;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    @if ( $direction == b ) {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    @if ( $direction == s ) {
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
+
+@mixin flex(
+    $direction: row,
+    $justify-content: start,
+    $align-items: stretch
+) {
+    display: flex;
+    @if ( $direction == h ) {
+        flex-direction: row;
+    }
+    @if ( $direction == v ) {
+        flex-direction: column;
+    }
+    // @else {
+    //     flex-direction: row;
+    // }
+    @if ( $justify-content == c ) {
+        justify-content: center;
+    }
+    @if ( $justify-content == sb ) {
+        justify-content: space-between;
+    }
+    @if ( $justify-content == sa ) {
+        justify-content: space-around;
+    }
+    @if ( $justify-content == se ) {
+        justify-content: space-evenly;
+    }
+    // @else {
+    //     justify-content: start;
+    // }
+    @if ( $align-items == c ) {
+        align-items: center;
+    }
+    @if ( $align-items == s ) {
+        align-items: start;
+    }
+    @if ( $align-items == e ) {
+        align-items: end;
+    }
+    // @else {
+    //     align-items: stretch;
+    // }
+}
+
+@mixin absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin breakpoint($breakpoint, $direction: max) {
+    
+    //check if the supplied breakpoint exists in our breakpoits map
+    @if map-has-key($breakpoints, $breakpoint) { 
+        $breakpoint-values: map-get($breakpoints, $breakpoint);
+        $breakpoint-min: map-get($breakpoint-values, min);
+        $breakpoint-max: map-get($breakpoint-values, max);
+
+        //check if we are writing styles for larger or smaller screens
+        @if $direction == min {
+            @media (min-width: $breakpoint-min) {
+                @content;
+            }
+        }
+
+        @else {
+            @media (max-width: $breakpoint-max) {
+                @content;
+            }
+        }
+    
+    // use the custom value if the breakpoint is not part of the pre-defined list
+    } @else {
+        
+        @if $direction == min {
+            @media (min-width: $breakpoint) {
+                @content;
+            }
+        }
+
+        @else {
+            @media (max-width: $breakpoint) {
+                @content;
+            }
+        }
+    }
+}
+
+@mixin appearance-animation {
+  
+    animation: appearance 750ms ease-out;
+    animation-delay: 900ms;
+    
+    @keyframes appearance {
+      0% {
+          opacity: 0;
+          transform: translateY(-25rem);
+      }
+  
+      50% {
+        opacity: 0.1;
+    }
+      80% {
+        opacity: 0.4;
+    }
+      100% {
+          opacity: 1;
+          transform: translateY(0);
+      }
+    }
+  }
