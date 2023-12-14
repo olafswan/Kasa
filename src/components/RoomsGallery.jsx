@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from "react-router-dom";
+import RoomCard from './RoomCard';
 
 
 export default function RoomsGallery() {
@@ -36,9 +37,11 @@ export default function RoomsGallery() {
   }
 
   return (
-    <div>
+    <div className='gallery'>
       
-{data.map(room => (<p key={room.id}><NavLink to={`/rooms/${room.id}`} key={room.id}> {room.title}</NavLink></p>))}
+{/* {data.map(room => (<p key={room.id}><NavLink to={`/rooms/${room.id}`} key={room.id}> {room.title}</NavLink></p>))} */}
+
+{data.map(room => (<RoomCard room={room} key={room.id}/>))}
 
     </div>
   );
