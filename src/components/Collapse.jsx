@@ -8,7 +8,6 @@ const Collapse = (props) =>{
   };
   const contentRef = useRef();
   
-  // ---
   const [rotateChevron, setRotateChevron] = useState(false);
   const handleRotate = () => setRotateChevron(!rotateChevron);
   const rotate = rotateChevron ? "rotate(-180deg)" : "rotate(0)"
