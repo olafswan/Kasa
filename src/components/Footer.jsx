@@ -1,12 +1,17 @@
 import { NavLink } from "react-router-dom";
 
 export default function Footer() {
+
+  const year = new Date().getFullYear();
+
   return (
-    <footer style={{ color : 'white', backgroundColor: 'black', marginTop: 20 }}>
+    <footer>
       <nav>
-        <NavLink to="/">KASA (image lien vers Home)</NavLink>
+      <NavLink to="/">
+        <img src="./src/assets/kasa_w.svg" alt="Logo Kasa"/>
+      </NavLink>
       </nav>
-      <p>© Kasa, All rights reserved</p>
+      <p>© {year} Kasa. All rights reserved</p>
     </footer>
   );
 }
