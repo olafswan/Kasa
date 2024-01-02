@@ -43,7 +43,7 @@ const RoomSpecs = (props) => {
                 <h1>{props.data.title}</h1>
                 <h2>
                     {/* affiche le lieu avec la bonne mise en forme */}
-                    {locationstylor(props.data.location).map((word, index) => (<><span key={`${word}${index}`}>{word}</span></>))}
+                    {locationstylor(props.data.location).map((word, index) => (<span key={`${word}${index}`}>{word}</span>))}
                 </h2>
                 <div className="tag-container">
                     {/* map pour afficher les tags */}
