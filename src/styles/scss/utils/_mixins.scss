@@ -82,6 +82,9 @@
     @if ( $justify-content == se ) {
         justify-content: space-evenly;
     }
+    @if ( $justify-content == e ) {
+        justify-content: end;
+    }
     // @else {
     //     justify-content: start;
     // }
