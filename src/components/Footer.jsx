@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 
 export default function Footer() {
 
+  // récupère l'année en cours
   const year = new Date().getFullYear();
 
   return (
