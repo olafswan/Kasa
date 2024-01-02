@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import './styles/css/style.css'
 
 
+// rooting
 const router = createBrowserRouter([
   {
     path : '/',
@@ -30,6 +31,7 @@ const router = createBrowserRouter([
   }
 ])
 
+// layout
 function Root () {
   return <>
     <Header/>
