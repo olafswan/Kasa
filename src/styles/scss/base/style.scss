@@ -110,30 +110,29 @@ main {
         border-radius: $main-radius;
         filter: contrast(60%);
     }
-    br {
-        display: none;
-        @include breakpoint(s) {
-            display: block;
+    div {
+
+        @include breakpoint(s, min) {
+            @include absolute-center;
         }
-    }
-    p {
-        @include absolute-center;
-        text-align: center;
-        color: $sec-color;
-        font-size: 2rem;
-        font-weight: 500;
+        position: absolute;
+        top: 50%;
+        left: 1rem;
+        transform: translate(0, -50%);
         width: max-content;
-        @include breakpoint(l) {
-            font-size: 1.5rem;
-        }
-        @include breakpoint(s) {
-            text-align: left;
-            font-size: 1.25rem;
-            // width: auto;
-            transform: translate(-75%, -50%);
+        p {
+            display: inline;
+            color: $sec-color;
+            font-size: 2rem;
+            font-weight: 500;
+                @include breakpoint(s) {
+                    display: block;
+                    text-align: left;
+                    font-size: 1.5rem;
+                }
         }
     }
-    
+
 }
 
 //* HOME ----------------------------------
