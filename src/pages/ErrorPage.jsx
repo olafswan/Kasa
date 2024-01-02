@@ -13,12 +13,6 @@ function PageError () {
         <h2>La page est introuvable !</h2>
         <NavLink to="/">Revenir à l&#39;accueil</NavLink>
         </div>
-        {/* <p>
-            {error?.error?.toString() ?? error?.toString()}
-        </p>
-        <p>
-        <i>{error.statusText || error.message}</i>
-        </p> */}
         <Footer/>
     </>
 }
