@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { NavLink } from "react-router-dom";
+import { useState, useEffect } from 'react';
 import RoomCard from './RoomCard';
 
 
 export default function RoomsGallery() {
-
 
 
   const [data, setData] = useState(null);
@@ -14,7 +12,7 @@ export default function RoomsGallery() {
     // Function to fetch JSON data
     const fetchData = async () => {
       try {
-        const response = await fetch('https://raw.githubusercontent.com/olafswan/OC_DAJR_P11/main/src/datas/logements.json'); // Replace with your API endpoint
+        const response = await fetch('https://raw.githubusercontent.com/olafswan/OC_DAJR_P11/main/src/datas/logements.json'); 
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -25,8 +23,8 @@ export default function RoomsGallery() {
       }
     };
 
-    fetchData(); // Call the fetchData function
-  }, []); // Empty dependency array ensures this effect runs only once (on component mount)
+    fetchData(); 
+  }, []); 
 
   if (error) {
     return <div>Error: {error.message}</div>;
@@ -39,9 +37,8 @@ export default function RoomsGallery() {
   return (
     <div className='gallery'>
       
-{/* {data.map(room => (<p key={room.id}><NavLink to={`/rooms/${room.id}`} key={room.id}> {room.title}</NavLink></p>))} */}
-
-{data.map(room => (<RoomCard room={room} key={room.id}/>))}
+    {/* map de data pour créer les cards de chaque logement  */}
+    {data.map(room => (<RoomCard room={room} key={room.id}/>))}
 
     </div>
   );
