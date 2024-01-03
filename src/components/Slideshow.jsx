@@ -1,4 +1,7 @@
 import { useState } from "react";
+import back from "../assets/arrow-back.svg";
+import forward from "../assets/arrow-forward.svg";
+
 
 const Slideshow = (props) => {
 
@@ -34,11 +37,11 @@ const Slideshow = (props) => {
       <p className={`${!hasSeveralPics ? 'hide' : ''}`}>{currentIndex + 1}/{picturesData.length}</p>
       {/* bouton précédent affiché uniquement si plusieurs images  */}
       <div className={`slide back ${!hasSeveralPics ? 'hide' : ''}`} onClick={goToPrevious}>
-        <img className="arrow" src="../src/assets/arrow-back.svg"/>
+        <img className="arrow" src={back}/>
       </div>
       {/* bouton suivant affiché uniquement si plusieurs images  */}
       <div className={`slide forward ${!hasSeveralPics ? 'hide' : ''}`} onClick={goToNext}>
-        <img className="arrow" src="../src/assets/arrow-forward.svg"/>
+        <img className="arrow" src={forward}/>
       </div>
     </div>
   );

@@ -1,4 +1,6 @@
 import { useState, useRef } from "react";
+import up from "../assets/chevron-up.svg";
+
 
 const Collapse = (props) =>{
   const [open, setOPen] = useState(false);
@@ -21,7 +23,7 @@ const Collapse = (props) =>{
         <h2>{props.label}</h2>
         {/* chevron et son animation */}
         <div className="icon-container" style={{ transform: rotate, transition: "all 0.25s linear" }}>
-         <img src="../src/assets/chevron-up.svg"/>
+         <img src={up}/>
         </div>
       </div>
       {/* modifie la hauteur si ouvert ou pas */}

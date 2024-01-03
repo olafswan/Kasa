@@ -1,4 +1,8 @@
 import Collapse from "../components/Collapse";
+import filled from "../assets/star-filled.svg";
+import empty from "../assets/star-empty.svg";
+
+
 
 const RoomSpecs = (props) => {
 
@@ -13,11 +17,11 @@ const RoomSpecs = (props) => {
             let result =[];
             // ajoute le nombre d'étoiles remplies
             for (let i = 0; i < filledStar; i++) {
-                result.push(<img src="../src/assets/star-filled.svg" key={`filledStar-${i}`} />)
+                result.push(<img src={filled} key={`filledStar-${i}`} />)
             }
            // ajoute le nombre d'étoiles vides
             for (let i = 0; i < emptyStar; i++) {
-                result.push(<img src="../src/assets/star-empty.svg" key={`emptyStar-${i}`} />)
+                result.push(<img src={empty} key={`emptyStar-${i}`} />)
             }
             return result;
         }

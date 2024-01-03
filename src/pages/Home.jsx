@@ -1,5 +1,6 @@
 import TopSection from "../components/TopSection";
 import RoomsGallery from "../components/RoomsGallery";
+import topImg from "../assets/shore.jpg";
 
 export default function Home() {
 
@@ -8,7 +9,7 @@ export default function Home() {
   return (
     <>
     
-      <TopSection img="./src/assets/shore.jpg" text={topText}/>
+      <TopSection img={topImg} text={topText}/>
 
       <RoomsGallery/>
 
