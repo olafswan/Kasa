@@ -2,6 +2,43 @@
 
 # Développez une application Web avec React et React Router
 
+### Qu’allez-vous apprendre dans ce projet ?
+ 
+Dans ce projet, vous allez implémenter le front-end d’une application en utilisant React et React Router pour créer 
+une expérience utilisateur moderne et réactive.
+
+Vous travaillerez sur la logique de présentation des données et les composants **React**, une bibliothèque JavaScript 
+populaire pour la création d'interfaces utilisateur.
+
+Vous apprendrez à mettre en œuvre des **animations CSS** et à développer l'interface avec **SASS**, un préprocesseur CSS, 
+pour améliorer l'expérience visuelle de l'application.
+
+Vous utiliserez **React Router** pour configurer la navigation entre les différentes pages de l'application. Cela vous 
+permettra de comprendre comment gérer efficacement le routage dans une application web moderne.
+
+Le projet se concentrera exclusivement sur le développement front-end, en se basant sur les maquettes fournies et en 
+utilisant des données simulées extraites d'un **fichier JSON**.
+
+Vous débuterez le projet avec **Create React App**, un outil qui simplifie la configuration initiale d'une application React. Vous utiliserez également **Node.js** pour exécuter du code JavaScript en dehors du navigateur.
+
+### En quoi ces compétences seront-elles importantes pour votre carrière ? 
+
+La maîtrise de React et de React Router est essentielle dans le développement web moderne, en particulier pour la 
+création d'applications web dynamiques et réactives. 
+
+L'utilisation de SASS pour gérer le CSS et l'implémentation des animations CSS sont également des compétences clés 
+pour améliorer l'expérience utilisateur. 
+
+Ces compétences vous permettront de créer des applications web interactives et visuellement attrayantes, très 
+demandées dans l'industrie du développement web.
+
+### Objectifs pédagogiques
+* Créer des composants avec React
+* Développer les routes d'une application web avec React Router
+* Initialiser une application web avec un framework
+
+***
+
 ### Scénario :
 
 Kasa vous recrute en tant que développeur Front-end en freelance pour développer leur nouvelle plateforme web. Kasa est dans le métier de 
@@ -111,6 +148,11 @@ Paul
 
 
 Ça y est, vous avez toutes les informations nécessaires, vous pouvez démarrer votre développement !
+
+***
+
+### Livrables :
+1. Un fichier au format TXT ou PDF comprenant le lien vers **votre projet sur GitHub** contenant l’ensemble du code de l'application.
 
 ### Cours :
 [Débutez avec React](https://openclassrooms.com/fr/courses/7008001-debutez-avec-react)
